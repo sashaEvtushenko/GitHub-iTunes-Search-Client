@@ -13,6 +13,10 @@
 		03DC610624AA47F500EFB57A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03DC610424AA47F500EFB57A /* Main.storyboard */; };
 		03DC610824AA47F700EFB57A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03DC610724AA47F700EFB57A /* Assets.xcassets */; };
 		03DC610B24AA47F700EFB57A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03DC610924AA47F700EFB57A /* LaunchScreen.storyboard */; };
+		03DC611324AA51FF00EFB57A /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC611224AA51FF00EFB57A /* GitHubUser.swift */; };
+		03DC611624AA59CA00EFB57A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC611524AA59CA00EFB57A /* Constants.swift */; };
+		03DC611B24AA86C300EFB57A /* iTunesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC611A24AA86C300EFB57A /* iTunesItem.swift */; };
+		03DC611E24AA8F8D00EFB57A /* iTunesRightIconResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC611D24AA8F8D00EFB57A /* iTunesRightIconResultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		03DC610724AA47F700EFB57A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03DC610A24AA47F700EFB57A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03DC610C24AA47F700EFB57A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03DC611224AA51FF00EFB57A /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
+		03DC611524AA59CA00EFB57A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		03DC611A24AA86C300EFB57A /* iTunesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesItem.swift; sourceTree = "<group>"; };
+		03DC611D24AA8F8D00EFB57A /* iTunesRightIconResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesRightIconResultCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,33 @@
 			children = (
 				03DC60FE24AA47F500EFB57A /* AppDelegate.swift */,
 				03DC610024AA47F500EFB57A /* SceneDelegate.swift */,
-				03DC610224AA47F500EFB57A /* ViewController.swift */,
 				03DC610424AA47F500EFB57A /* Main.storyboard */,
+				03DC611524AA59CA00EFB57A /* Constants.swift */,
+				03DC610224AA47F500EFB57A /* ViewController.swift */,
+				03DC611C24AA8F6F00EFB57A /* View */,
+				03DC611424AA538E00EFB57A /* Model */,
 				03DC610724AA47F700EFB57A /* Assets.xcassets */,
 				03DC610924AA47F700EFB57A /* LaunchScreen.storyboard */,
 				03DC610C24AA47F700EFB57A /* Info.plist */,
 			);
 			path = "GitHub&iTunes Search Client";
+			sourceTree = "<group>";
+		};
+		03DC611424AA538E00EFB57A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03DC611224AA51FF00EFB57A /* GitHubUser.swift */,
+				03DC611A24AA86C300EFB57A /* iTunesItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03DC611C24AA8F6F00EFB57A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03DC611D24AA8F8D00EFB57A /* iTunesRightIconResultCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03DC611B24AA86C300EFB57A /* iTunesItem.swift in Sources */,
+				03DC611624AA59CA00EFB57A /* Constants.swift in Sources */,
 				03DC610324AA47F500EFB57A /* ViewController.swift in Sources */,
+				03DC611324AA51FF00EFB57A /* GitHubUser.swift in Sources */,
+				03DC611E24AA8F8D00EFB57A /* iTunesRightIconResultCell.swift in Sources */,
 				03DC60FF24AA47F500EFB57A /* AppDelegate.swift in Sources */,
 				03DC610124AA47F500EFB57A /* SceneDelegate.swift in Sources */,
 			);
