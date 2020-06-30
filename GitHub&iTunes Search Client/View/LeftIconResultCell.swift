@@ -10,6 +10,8 @@ import UIKit
 
 class LeftIconResultCell: UITableViewCell {
 
-
+    @IBOutlet var rightBottomLabel: UILabel!
+    @IBOutlet var rightTopLabel: UILabel!
+    @IBOutlet var icon: UIImageView!
 
 }

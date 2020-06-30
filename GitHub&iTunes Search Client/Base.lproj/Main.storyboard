@@ -40,13 +40,13 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OYe-u9-fi2">
                                                             <rect key="frame" x="0.0" y="17.5" width="183" height="49"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artistName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9Y-zh-UwX">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="leftTopLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9Y-zh-UwX">
                                                                     <rect key="frame" x="0.0" y="0.0" width="183" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trackName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1K-OE-gue">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="leftBottomLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1K-OE-gue">
                                                                     <rect key="frame" x="0.0" y="28.5" width="183" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -77,29 +77,55 @@
                                             <outlet property="leftTopLabel" destination="y9Y-zh-UwX" id="NdP-a1-f54"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="iTunesLeftIconResultCell" rowHeight="92" id="clQ-yV-twF" customClass="GitHubUserTableViewCell" customModule="GitHub_iTunes_Search_Client" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeftIconResultCell" rowHeight="92" id="clQ-yV-twF" customClass="LeftIconResultCell" customModule="GitHub_iTunes_Search_Client" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="133.5" width="414" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="clQ-yV-twF" id="yN4-uQ-waq">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G6H-Th-ttC">
+                                                    <rect key="frame" x="20" y="11" width="374" height="70"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EMk-T7-aKS">
+                                                            <rect key="frame" x="0.0" y="5" width="183" height="60"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="60" id="AFr-YN-D9l"/>
+                                                                <constraint firstAttribute="height" constant="60" id="GhF-Fr-Osd"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8NR-BC-7qc">
+                                                            <rect key="frame" x="191" y="10.5" width="183" height="49"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rightTopLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlW-5B-7AG">
+                                                                    <rect key="frame" x="78" y="0.0" width="105" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rightBottomLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mi1-dC-hhu">
+                                                                    <rect key="frame" x="50" y="28.5" width="133" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="G6H-Th-ttC" firstAttribute="leading" secondItem="yN4-uQ-waq" secondAttribute="leadingMargin" id="FKu-gR-0oJ"/>
+                                                <constraint firstItem="G6H-Th-ttC" firstAttribute="top" secondItem="yN4-uQ-waq" secondAttribute="topMargin" id="ieG-CL-BtV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="G6H-Th-ttC" secondAttribute="trailing" id="oxw-3b-4EB"/>
+                                                <constraint firstItem="G6H-Th-ttC" firstAttribute="bottom" secondItem="yN4-uQ-waq" secondAttribute="bottomMargin" id="x8y-Mb-0pK"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GitHubRightIconResultCell" id="YnW-Zo-KJi" customClass="GitHubUserTableViewCell" customModule="GitHub_iTunes_Search_Client" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="225.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YnW-Zo-KJi" id="qTa-GO-qRl">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GitHubLeftIconResultCell" id="KEs-lT-YJj" customClass="GitHubUserTableViewCell" customModule="GitHub_iTunes_Search_Client" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="269" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KEs-lT-YJj" id="U4n-SN-cXD">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="icon" destination="EMk-T7-aKS" id="z2p-dp-0k7"/>
+                                            <outlet property="rightBottomLabel" destination="mi1-dC-hhu" id="DnQ-VA-YfC"/>
+                                            <outlet property="rightTopLabel" destination="qlW-5B-7AG" id="vWZ-af-Z7F"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
