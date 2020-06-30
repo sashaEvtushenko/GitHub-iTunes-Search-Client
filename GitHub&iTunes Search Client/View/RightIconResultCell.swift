@@ -8,10 +8,10 @@
 
 import UIKit
 
-class iTunesRightIconResultCell: UITableViewCell {
+class RightIconResultCell: UITableViewCell {
 
-    @IBOutlet var trackNameLabel: UILabel!
-    @IBOutlet var artistNameLabel: UILabel!
-    @IBOutlet var artwork60: UIImageView!
+    @IBOutlet var leftBottomLabel: UILabel!
+    @IBOutlet var leftTopLabel: UILabel!
+    @IBOutlet var icon: UIImageView!
 
 }

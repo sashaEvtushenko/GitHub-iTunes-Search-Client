@@ -16,7 +16,8 @@
 		03DC611324AA51FF00EFB57A /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC611224AA51FF00EFB57A /* GitHubUser.swift */; };
 		03DC611624AA59CA00EFB57A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC611524AA59CA00EFB57A /* Constants.swift */; };
 		03DC611B24AA86C300EFB57A /* iTunesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC611A24AA86C300EFB57A /* iTunesItem.swift */; };
-		03DC611E24AA8F8D00EFB57A /* iTunesRightIconResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC611D24AA8F8D00EFB57A /* iTunesRightIconResultCell.swift */; };
+		03DC611E24AA8F8D00EFB57A /* RightIconResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC611D24AA8F8D00EFB57A /* RightIconResultCell.swift */; };
+		03DC612024AB350600EFB57A /* LeftIconResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC611F24AB350600EFB57A /* LeftIconResultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,8 @@
 		03DC611224AA51FF00EFB57A /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
 		03DC611524AA59CA00EFB57A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		03DC611A24AA86C300EFB57A /* iTunesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesItem.swift; sourceTree = "<group>"; };
-		03DC611D24AA8F8D00EFB57A /* iTunesRightIconResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesRightIconResultCell.swift; sourceTree = "<group>"; };
+		03DC611D24AA8F8D00EFB57A /* RightIconResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightIconResultCell.swift; sourceTree = "<group>"; };
+		03DC611F24AB350600EFB57A /* LeftIconResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftIconResultCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,8 @@
 		03DC611C24AA8F6F00EFB57A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				03DC611D24AA8F8D00EFB57A /* iTunesRightIconResultCell.swift */,
+				03DC611D24AA8F8D00EFB57A /* RightIconResultCell.swift */,
+				03DC611F24AB350600EFB57A /* LeftIconResultCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,8 +173,9 @@
 				03DC611624AA59CA00EFB57A /* Constants.swift in Sources */,
 				03DC610324AA47F500EFB57A /* ViewController.swift in Sources */,
 				03DC611324AA51FF00EFB57A /* GitHubUser.swift in Sources */,
-				03DC611E24AA8F8D00EFB57A /* iTunesRightIconResultCell.swift in Sources */,
+				03DC611E24AA8F8D00EFB57A /* RightIconResultCell.swift in Sources */,
 				03DC60FF24AA47F500EFB57A /* AppDelegate.swift in Sources */,
+				03DC612024AB350600EFB57A /* LeftIconResultCell.swift in Sources */,
 				03DC610124AA47F500EFB57A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

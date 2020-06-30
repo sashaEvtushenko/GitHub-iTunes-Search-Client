@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="131" width="414" height="731"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="iTunesRightIconResultCell" rowHeight="105.5" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-kb-T8I" customClass="iTunesRightIconResultCell" customModule="GitHub_iTunes_Search_Client" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RightIconResultCell" rowHeight="105.5" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-kb-T8I" customClass="RightIconResultCell" customModule="GitHub_iTunes_Search_Client" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hNK-kb-T8I" id="cIF-KA-3kk">
@@ -55,7 +55,11 @@
                                                             </subviews>
                                                         </stackView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ukf-4G-6QX">
-                                                            <rect key="frame" x="191" y="17" width="183" height="50"/>
+                                                            <rect key="frame" x="191" y="12" width="183" height="60"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="60" id="1yZ-bt-gc1"/>
+                                                                <constraint firstAttribute="height" constant="60" id="oGU-Rr-U3w"/>
+                                                            </constraints>
                                                         </imageView>
                                                     </subviews>
                                                 </stackView>
@@ -68,9 +72,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="artistNameLabel" destination="y9Y-zh-UwX" id="NdP-a1-f54"/>
-                                            <outlet property="artwork60" destination="ukf-4G-6QX" id="TqW-tp-90I"/>
-                                            <outlet property="trackNameLabel" destination="j1K-OE-gue" id="Kga-1I-2PF"/>
+                                            <outlet property="icon" destination="ukf-4G-6QX" id="TqW-tp-90I"/>
+                                            <outlet property="leftBottomLabel" destination="j1K-OE-gue" id="Kga-1I-2PF"/>
+                                            <outlet property="leftTopLabel" destination="y9Y-zh-UwX" id="NdP-a1-f54"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="iTunesLeftIconResultCell" rowHeight="92" id="clQ-yV-twF" customClass="GitHubUserTableViewCell" customModule="GitHub_iTunes_Search_Client" customModuleProvider="target">
