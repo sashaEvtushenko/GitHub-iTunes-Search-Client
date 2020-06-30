@@ -8,20 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
     
     var gitHubUsers = [GitHubUser]()
     var itunesItems = [iTunesItem]()
     
-    @IBOutlet var searchBarTextField: UITextField!
+    @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var searchResultsTableView: UITableView!
     @IBOutlet var segmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBarTextField.delegate = self
         searchResultsTableView.delegate = self
         searchResultsTableView.dataSource = self
+        searchBar.delegate = self
         
         switch segmentedControl.selectedSegmentIndex {
         case 0:
@@ -83,9 +83,19 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
         }.resume()
     }
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchBarTextField.endEditing(true)
-        return false
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let searchBarString = searchBar.text
+        
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            guard let searchString = searchBarString?.replacingOccurrences(of: " ", with: "+") else { return }
+            search(searchURL: ITUNES_SEARCH_URL, searchQuery: searchString)
+        case 1:
+            search(searchURL: GITHUB_USERS_SEARCH_URL, searchQuery: "Tom")
+        default:
+            break
+        }
     }
+    
 }
 

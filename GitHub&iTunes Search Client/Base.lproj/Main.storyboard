@@ -23,27 +23,22 @@
                                     <segment title="GitHub"/>
                                 </segments>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter search word here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="buK-sE-Jeo">
-                                <rect key="frame" x="20" y="83" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Zm-4b-dyA">
-                                <rect key="frame" x="0.0" y="125" width="414" height="737"/>
+                                <rect key="frame" x="0.0" y="131" width="414" height="731"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="iTunesRightIconResultCell" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-kb-T8I" customClass="iTunesRightIconResultCell" customModule="GitHub_iTunes_Search_Client" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="89"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="iTunesRightIconResultCell" rowHeight="105.5" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-kb-T8I" customClass="iTunesRightIconResultCell" customModule="GitHub_iTunes_Search_Client" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hNK-kb-T8I" id="cIF-KA-3kk">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="88.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FgI-4j-eN9">
-                                                    <rect key="frame" x="20" y="11" width="374" height="66.5"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="83.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OYe-u9-fi2">
-                                                            <rect key="frame" x="0.0" y="9" width="183" height="49"/>
+                                                            <rect key="frame" x="0.0" y="17.5" width="183" height="49"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artistName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9Y-zh-UwX">
                                                                     <rect key="frame" x="0.0" y="0.0" width="183" height="20.5"/>
@@ -60,16 +55,16 @@
                                                             </subviews>
                                                         </stackView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ukf-4G-6QX">
-                                                            <rect key="frame" x="191" y="0.5" width="183" height="66"/>
+                                                            <rect key="frame" x="191" y="17" width="183" height="50"/>
                                                         </imageView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="FgI-4j-eN9" firstAttribute="leading" secondItem="cIF-KA-3kk" secondAttribute="leadingMargin" id="CM2-Ex-Af9"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="FgI-4j-eN9" secondAttribute="trailing" id="G82-Jr-DLi"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="FgI-4j-eN9" secondAttribute="bottom" id="Nsm-C3-aVE"/>
-                                                <constraint firstItem="FgI-4j-eN9" firstAttribute="top" secondItem="cIF-KA-3kk" secondAttribute="topMargin" id="bmw-DH-1vJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="FgI-4j-eN9" secondAttribute="bottom" id="DXB-iq-0VT"/>
+                                                <constraint firstItem="FgI-4j-eN9" firstAttribute="trailing" secondItem="cIF-KA-3kk" secondAttribute="trailingMargin" id="LdZ-gz-l8t"/>
+                                                <constraint firstItem="FgI-4j-eN9" firstAttribute="leading" secondItem="cIF-KA-3kk" secondAttribute="leadingMargin" id="afR-bU-Oaf"/>
+                                                <constraint firstItem="FgI-4j-eN9" firstAttribute="top" secondItem="cIF-KA-3kk" secondAttribute="topMargin" id="eNT-aY-rHk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -79,7 +74,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="iTunesLeftIconResultCell" rowHeight="92" id="clQ-yV-twF" customClass="GitHubUserTableViewCell" customModule="GitHub_iTunes_Search_Client" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="116.5" width="414" height="92"/>
+                                        <rect key="frame" x="0.0" y="133.5" width="414" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="clQ-yV-twF" id="yN4-uQ-waq">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
@@ -87,7 +82,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GitHubRightIconResultCell" id="YnW-Zo-KJi" customClass="GitHubUserTableViewCell" customModule="GitHub_iTunes_Search_Client" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="208.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="225.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YnW-Zo-KJi" id="qTa-GO-qRl">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -95,7 +90,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GitHubLeftIconResultCell" id="KEs-lT-YJj" customClass="GitHubUserTableViewCell" customModule="GitHub_iTunes_Search_Client" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="252" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="269" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KEs-lT-YJj" id="U4n-SN-cXD">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -104,24 +99,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="BVr-7U-RwX">
+                                <rect key="frame" x="0.0" y="75" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="sed-Jt-m98" firstAttribute="top" secondItem="CkV-rS-bvi" secondAttribute="top" id="4wq-1C-eka"/>
-                            <constraint firstItem="CkV-rS-bvi" firstAttribute="trailing" secondItem="buK-sE-Jeo" secondAttribute="trailing" constant="20" id="5Bf-I9-MQ0"/>
                             <constraint firstItem="sed-Jt-m98" firstAttribute="leading" secondItem="CkV-rS-bvi" secondAttribute="leading" constant="20" id="Dgo-U4-v4J"/>
-                            <constraint firstItem="buK-sE-Jeo" firstAttribute="leading" secondItem="CkV-rS-bvi" secondAttribute="leading" constant="20" id="MsC-Na-LJU"/>
+                            <constraint firstItem="BVr-7U-RwX" firstAttribute="top" secondItem="sed-Jt-m98" secondAttribute="bottom" id="K7W-jT-v72"/>
                             <constraint firstItem="7Zm-4b-dyA" firstAttribute="bottom" secondItem="CkV-rS-bvi" secondAttribute="bottom" id="Qxu-vf-A72"/>
                             <constraint firstItem="7Zm-4b-dyA" firstAttribute="trailing" secondItem="CkV-rS-bvi" secondAttribute="trailing" id="S63-mW-TAi"/>
-                            <constraint firstItem="7Zm-4b-dyA" firstAttribute="top" secondItem="buK-sE-Jeo" secondAttribute="bottom" constant="8" id="VaX-gf-49P"/>
                             <constraint firstItem="CkV-rS-bvi" firstAttribute="trailing" secondItem="sed-Jt-m98" secondAttribute="trailing" constant="20" id="gHS-et-A1y"/>
+                            <constraint firstItem="BVr-7U-RwX" firstAttribute="trailing" secondItem="CkV-rS-bvi" secondAttribute="trailing" id="hsX-6e-0hw"/>
                             <constraint firstItem="7Zm-4b-dyA" firstAttribute="leading" secondItem="CkV-rS-bvi" secondAttribute="leading" id="icT-E5-Wo8"/>
-                            <constraint firstItem="buK-sE-Jeo" firstAttribute="top" secondItem="sed-Jt-m98" secondAttribute="bottom" constant="8" id="uJq-DD-uSB"/>
+                            <constraint firstItem="BVr-7U-RwX" firstAttribute="leading" secondItem="CkV-rS-bvi" secondAttribute="leading" id="ldx-n7-zuy"/>
+                            <constraint firstItem="7Zm-4b-dyA" firstAttribute="top" secondItem="BVr-7U-RwX" secondAttribute="bottom" id="snD-Wt-FyN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CkV-rS-bvi"/>
                     </view>
                     <connections>
-                        <outlet property="searchBarTextField" destination="buK-sE-Jeo" id="7io-yN-rzq"/>
+                        <outlet property="searchBar" destination="BVr-7U-RwX" id="qTG-TH-d2I"/>
                         <outlet property="searchResultsTableView" destination="7Zm-4b-dyA" id="HD9-FV-fCB"/>
                         <outlet property="segmentedControl" destination="sed-Jt-m98" id="jG2-ZB-4Pb"/>
                     </connections>
