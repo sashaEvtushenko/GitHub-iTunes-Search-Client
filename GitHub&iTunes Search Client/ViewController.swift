@@ -42,63 +42,19 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDataSour
         case 0:
             let reuseID = indexPath.row % 2 == 0 ? cellReuseIdentifiers[0] : cellReuseIdentifiers[1]
             if let cell = searchResultsTableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath) as? RightIconResultCell {
-                cell.leftTopLabel.text = itunesItems[indexPath.row].artistName
-                cell.leftBottomLabel.text = itunesItems[indexPath.row].trackName
-                if let imageUrl = URL(string: itunesItems[indexPath.row].artworkUrl60) {
-                    DispatchQueue.global().async {
-                       if let data = try? Data(contentsOf: imageUrl)
-                       {
-                         DispatchQueue.main.async {
-                            cell.icon.image = UIImage(data: data)
-                         }
-                       }
-                    }
-                }
+                cell.configureCell(iTunesItem: itunesItems[indexPath.row])
                 return cell
             } else if let cell = searchResultsTableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath) as? LeftIconResultCell {
-                cell.rightTopLabel.text = itunesItems[indexPath.row].artistName
-                cell.rightBottomLabel.text = itunesItems[indexPath.row].trackName
-                if let imageUrl = URL(string: itunesItems[indexPath.row].artworkUrl60) {
-                    DispatchQueue.global().async {
-                       if let data = try? Data(contentsOf: imageUrl)
-                       {
-                         DispatchQueue.main.async {
-                            cell.icon.image = UIImage(data: data)
-                         }
-                       }
-                    }
-                }
+                cell.configureCell(iTunesItem: itunesItems[indexPath.row])
                 return cell
             }
         case 1:
             let reuseID = indexPath.row % 2 == 0 ? cellReuseIdentifiers[1] : cellReuseIdentifiers[0]
             if let cell = searchResultsTableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath) as? RightIconResultCell {
-                cell.leftTopLabel.text = gitHubUsers[indexPath.row].login
-                cell.leftBottomLabel.text = gitHubUsers[indexPath.row].html_url
-                if let imageUrl = URL(string: gitHubUsers[indexPath.row].avatar_url) {
-                    DispatchQueue.global().async {
-                       if let data = try? Data(contentsOf: imageUrl)
-                       {
-                         DispatchQueue.main.async {
-                            cell.icon.image = UIImage(data: data)
-                         }
-                       }
-                    }
-                }
+                cell.configureCell(gitHubUser: gitHubUsers[indexPath.row])
                 return cell
             } else if let cell = searchResultsTableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath) as? LeftIconResultCell {
-                cell.rightTopLabel.text = gitHubUsers[indexPath.row].login
-                cell.rightBottomLabel.text = gitHubUsers[indexPath.row].html_url
-                if let imageUrl = URL(string: gitHubUsers[indexPath.row].avatar_url) {
-                    DispatchQueue.global().async {
-                       if let data = try? Data(contentsOf: imageUrl)
-                       {
-                         DispatchQueue.main.async {
-                            cell.icon.image = UIImage(data: data)
-                         }
-                       }
-                    }
-                }
+                cell.configureCell(gitHubUser: gitHubUsers[indexPath.row])
                 return cell
             }
         default:
@@ -117,7 +73,6 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDataSour
                 do {
                     let jsonData = try JSONDecoder().decode(iTunesItems.self, from: data)
                     self.itunesItems = jsonData.results
-//                    print(self.itunesItems)
                     DispatchQueue.main.async {
                         self.searchResultsTableView.reloadData()
                     }
@@ -131,7 +86,6 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDataSour
                 do {
                     let jsonData = try JSONDecoder().decode(GitHubUsers.self, from: data)
                     self.gitHubUsers = jsonData.items
-//                    print(self.gitHubUsers)
                     DispatchQueue.main.async {
                         self.searchResultsTableView.reloadData()
                     }

@@ -1,0 +1,6 @@
+framework module Pods_GitHub_iTunes_Search_Client {
+  umbrella header "Pods-GitHub&iTunes Search Client-umbrella.h"
+
+  export *
+  module * { export * }
+}
